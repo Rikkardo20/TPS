@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        table, td{
+            width: 500px;
+            height: 50px;
+            background-color: beige;
+        }
+    </style>
+<h1>TABELLA DINAMICA</h1>
+<input type="text" id="nome" placeholder="Nome">
+<input type="text" id="cognome" placeholder="Cognome">
+<input type="text" id="classe" placeholder="Classe">
+<input type="text" id="citta" placeholder="citta">
+<input type="text" id="indirizzo" placeholder="Indirizzo">
+<button type="button" id="bottone" onclick="refresh()">AGGIUNGI</button>
+<table id = "demo" border = "2">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Classe</th>
+        <th>Città</th>
+        <th>Indirizzo</th>
+    </tr>
+</table>
+<script>
+function refresh(){
+    var nome = document.getElementById('nome').value;
+    var cognome = document.getElementById('cognome').value;
+    var classe = document.getElementById('classe').value;
+    var citta = document.getElementById('citta').value;
+    var indirizzo = document.getElementById('indirizzo').value;
+    let riga = [nome,  cognome, classe, citta, indirizzo];
+    document.getElementById("demo").innerHTML += "<tr><td>" + riga[0] + "</td><td>" + riga[1] +  "</td><td>" + riga[2] + "</td><td>" + riga[3] +  "</td><td>" + riga[4] + "</td></tr>";  
+}
+</script>
+
+</body>
+</html>
