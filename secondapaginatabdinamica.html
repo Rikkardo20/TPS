@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <h1>Seconda Pagina</h1>
+    <script>
+        document.getElementById("demo").value = localStorage.getItem("Nome");
+        document.getElementById("demo").value = localStorage.getItem("Cognome");
+        document.getElementById("demo").value = localStorage.getItem("Classe");
+        document.getElementById("demo").value = localStorage.getItem("Citta");
+        document.getElementById("demo").value = localStorage.getItem("Indirizzo");
+        let array = [localStorage.getItem(riga[0]),localStorage.getItem("Cognome"), localStorage.getItem("Classe"),localStorage.getItem("Citta"),localStorage.getItem("Indirizzo"),];
+        document.getElementById("demo").value = array;
+    </script>
+    <style></style>
+</body>
+</html>
