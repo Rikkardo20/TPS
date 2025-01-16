@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <input type="file" onchange="leggiFile(this)">
+    <title>tabella migranti</title>
+    <h1 style="text-align: center;">Tabella Migranti</h1>
+</head>
+<table id = "demo" border = "2" style="text-align: center;"></table>
+<body>
+    <style>
+        table, td{
+            position:-webkit-sticky;
+            width: 1000px;
+            height: 50px;
+            background-color: white;
+        }
+    </style>
+</body>
+<script>
+    function leggiFile(input){
+
+let file = input.files[0] //presa in input del file
+let lettoreF = new FileReader() //creazione oggetto filereader
+lettoreF.readAsText(file);
+
+lettoreF.onload = function() {
+let contenuto = lettoreF.result; // Contenuto del file letto
+creaTab(contenuto);
+}
+    }
+    function creaTab(stream){
+        let righe = stream.split("\n")
+        for (let i = 0; i<righe.length;i++){
+            let parole = righe[i].split(",");
+            var tabella = document.getElementById("demo");//cosi tutto sarà dentro ad una tabella
+            var riga = document.createElement("tr");//creo una riga
+            var anno= document.createElement("th");//creo una colonna
+            anno.innerHTML = parole[0].replaceAll('"',"");//anno prenderà il valore della prima parola di ogni riga,mentre replaceAll toglie tutte le virgolette 
+            var numero = document.createElement("th");
+            numero.innerHTML = parole[1].replaceAll('"',"");//numero prenderà il valore della seconda parola di ogni riga
+            riga.appendChild(anno);//questi due diventeranno figlie della riga
+            riga.appendChild(numero);
+            tabella.appendChild(riga);//riga diventa figlia di tabella
+        } 
+        
+        
+        
+    }
+
+    //io ora devo dividere tutte le righe del file e stamparle all'interno della tabella 
+</script>
