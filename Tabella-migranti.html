@@ -17,7 +17,7 @@
             background-color: white;
         }
     </style>
-    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="myCanvas" width="2000" height="1000" style="border:1px solid #d3d3d3;"></canvas>
 </body>
 <script>
             const xanni = [];
@@ -52,17 +52,17 @@ creaTab(contenuto);
         } //adesso devo fare il modo che invece di inserire subito tutto nella tabella, prima li inserisca in due array e poi in una tabella
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
-        ctx.moveTo(0,500);//setta dove iniziare
-        const lunghezzaanni = 500/25;
+        ctx.moveTo(0,1000);//setta dove iniziare
+        const lunghezzaanni = 1000/righe.length;
         let valoreX = 0;
         console.log(ymigranti)
         for (let i = 1; i < 25; i += 1) {
             valoreX+= lunghezzaanni;
-            ctx.lineTo(valoreX, ymigranti[i]/100);
+            ctx.lineTo(valoreX, ymigranti[i]/200);
             ctx.stroke();
-            ctx.moveTo(valoreX, ymigranti[i]/100);
+            ctx.moveTo(valoreX, ymigranti[i]/200);
+            ctx.fillText(ymigranti[i], valoreX + 5, ymigranti[i] / 200 - 5); // Posiziona il valore sopra il punto
         }
-        
-        
+           
     }
 </script>
