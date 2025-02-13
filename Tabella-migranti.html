@@ -17,8 +17,11 @@
             background-color: white;
         }
     </style>
+    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #d3d3d3;"></canvas>
 </body>
 <script>
+            const xanni = [];
+            const ymigranti= [];
     function leggiFile(input){
 
 let file = input.files[0] //presa in input del file
@@ -31,6 +34,7 @@ creaTab(contenuto);
 }
     }
     function creaTab(stream){
+        
         let righe = stream.split("\n")
         for (let i = 0; i<righe.length;i++){
             let parole = righe[i].split(",");
@@ -43,11 +47,22 @@ creaTab(contenuto);
             riga.appendChild(anno);//questi due diventeranno figlie della riga
             riga.appendChild(numero);
             tabella.appendChild(riga);//riga diventa figlia di tabella
-        } 
-        
+            xanni.push(anno);
+            ymigranti.push(parole[1].replaceAll('"',""));
+        } //adesso devo fare il modo che invece di inserire subito tutto nella tabella, prima li inserisca in due array e poi in una tabella
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,500);//setta dove iniziare
+        const lunghezzaanni = 500/25;
+        let valoreX = 0;
+        console.log(ymigranti)
+        for (let i = 1; i < 25; i += 1) {
+            valoreX+= lunghezzaanni;
+            ctx.lineTo(valoreX, ymigranti[i]/100);
+            ctx.stroke();
+            ctx.moveTo(valoreX, ymigranti[i]/100);
+        }
         
         
     }
-
-    //io ora devo dividere tutte le righe del file e stamparle all'interno della tabella 
 </script>
