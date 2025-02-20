@@ -56,13 +56,14 @@ creaTab(contenuto);
         const lunghezzaanni = 1000/righe.length;
         let valoreX = 0;
         console.log(ymigranti)
-        for (let i = 24; i >=0; i -= 1) {
+    
+        for (let i = 0; i <=ymigranti.length; i ++) {
             valoreX+= lunghezzaanni;
-            ctx.lineTo(valoreX, (ymigranti[i]/200));
-            ctx.stroke();
-            ctx.moveTo(valoreX, ymigranti[i]/200);
-            ctx.fillText(ymigranti[i], valoreX + 5, ymigranti[i] / 200 - 5); // Posiziona il valore sopra il punto
+            ctx.lineTo(valoreX, c.height-(ymigranti[i]/200));
+            /*ctx.moveTo(valoreX, ymigranti[i]/200);*/
+            ctx.fillText(ymigranti[i], valoreX + 5, c.height-(ymigranti[i] / 200)); // Posiziona il valore sopra il punto
         }
+        ctx.stroke();
            
     }
 </script>
