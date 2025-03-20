@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: aliceblue;">Registrazione Dati</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #9932CC;
+        }
+        h1 {
+            color: aliceblue;
+        }
+        form {
+            color: aliceblue;
+        }
+        a {
+            color: aliceblue;
+        }
+    </style>
+    <h1>Registrazione Dati Anagrafici</h1>
+    <form id="Dati">
+        <label>Nome: <input type="text" id="nome" required></label><br><br>
+        <label>Cognome: <input type="text" id="cognome" required></label><br><br>
+        <label>Indirizzo: <input type="text" id="indirizzo" required></label><br><br>
+        <label>Età: <input type="number" id="eta" required></label><br><br>
+        <label>Sesso: 
+            <select id="sesso">
+                <option value="Maschio">Maschio</option>
+                <option value="Femmina">Femmina</option>
+            </select>
+        </label><br><br>
+        <button type="submit">Salva Dati</button>
+    </form>
+    
+    <br>
+    <a href="oggettisecondapag.html">Visualizza i dati inseriti</a>
+
+    <script>
+        document.getElementById("Dati").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let dati = {
+                nome: document.getElementById("nome").value,
+                cognome: document.getElementById("cognome").value,
+                indirizzo: document.getElementById("indirizzo").value,
+                eta: document.getElementById("eta").value,
+                sesso: document.getElementById("sesso").value
+            };
+
+            localStorage.setItem("datiUtente", JSON.stringify(dati));
+            this.reset();
+        });
+    </script>
+</body>
+</html>

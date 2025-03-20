@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: aliceblue;">Visualizza Dati</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #9932CC;
+        }
+        h2{
+            color: aliceblue;
+        }
+        table{
+            color: aliceblue;
+            margin: 0 auto;
+        }
+        a{
+            color: aliceblue;
+            margin: 0 auto;
+        }
+    </style>
+    <h2>Dati Salvati</h2>
+    <table border="3">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Indirizzo</th>
+                <th>Età</th>
+                <th>Sesso</th>
+            </tr>
+        </thead>
+        <tbody id="tabella"></tbody>
+    </table>
+
+    <br>
+    <a href="oggettiprimapag.html">Torna alla Registrazione</a>
+
+    <script>
+        let dati = localStorage.getItem("datiUtente");
+        
+        if (dati) {
+            let persona = JSON.parse(dati);
+            let riga = `<tr>
+                            <td>${persona.nome}</td>
+                            <td>${persona.cognome}</td>
+                            <td>${persona.indirizzo}</td>
+                            <td>${persona.eta}</td>
+                            <td>${persona.sesso}</td>
+                        </tr>`;
+            document.getElementById("tabella").innerHTML = riga;
+        } else {
+            document.getElementById("tabella").innerHTML = "<tr><td>Nessun dato registrato</td></tr>";
+        }
+    </script>
+</body>
+</html>
