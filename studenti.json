@@ -1,0 +1,87 @@
+[
+    {
+        "nome": "Riccardo",
+        "cognome": "Dal Bello",
+        "data_nascita": "2007-02-05"
+    },
+    {
+        "nome": "Andrea",
+        "cognome": "Bellucco",
+        "data_nascita": "2000-21-02"
+    },
+    {
+        "nome": "Oscar",
+        "cognome": "Martella",
+        "data_nascita": "1990-03-21"
+    },
+    {
+        "nome": "Samuele",
+        "cognome": "Max",
+        "data_nascita": "2002-07-30"
+    },
+    {
+        "nome": "Alessandro",
+        "cognome": "Re",
+        "data_nascita": "1980-01-14"
+    },
+    {
+        "nome": "Gianfrancesco",
+        "cognome": "Curzio",
+        "data_nascita": "1995-09-05"
+    },
+    {
+        "nome": "Daniele",
+        "cognome": "Kim",
+        "data_nascita": "2004-12-19"
+    },
+    {
+        "nome": "Tamer",
+        "cognome": "Qaddura",
+        "data_nascita": "1976-06-09"
+    },
+    {
+        "nome": "Matteo",
+        "cognome": "Rubino",
+        "data_nascita": "1930-05-27"
+    },
+    {
+        "nome": "Giuseppe",
+        "cognome": "Vaccaro",
+        "data_nascita": "2005-10-11"
+    },
+    {
+        "nome": "Francesco",
+        "cognome": "Follatello",
+        "data_nascita": "1999-04-05"
+    },
+    {
+        "nome": "Cristian",
+        "cognome": "Luongo",
+        "data_nascita": "2007-08-12"
+    },
+    {
+        "nome": "Paolo",
+        "cognome": "Petrozzi",
+        "data_nascita": "2004-11-29"
+    },
+    {
+        "nome": "Matteo",
+        "cognome": "Caenazzo",
+        "data_nascita": "1987-06-07"
+    },
+    {
+        "nome": "Marco",
+        "cognome": "Moroni",
+        "data_nascita": "2012-09-16"
+    },
+    {
+        "nome": "Marco",
+        "cognome": "Imboldi",
+        "data_nascita": "1990-02-25"
+    },
+    {
+        "nome": "Davide",
+        "cognome": "Gostoli",
+        "data_nascita": "1946-03-12"
+    }
+]

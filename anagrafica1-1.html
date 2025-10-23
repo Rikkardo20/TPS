@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Compito anagrafica</title>
+        <link rel="stylesheet" href="stiletabella.css">
+    </head>
+    <body>
+        <main>
+            <h1>Compito anagrafica Riccardo Dal Bello</h1>
+            <header>
+                <label for="selection">cerca:</label>
+                <select id="selection">
+                    <option value="all">Tutto</option>
+                    <option value="adult">Cerca solo i maggiorenni</option>
+                </select>
+                <input id="search" type="search" placeholder="Cerca cognome">
+                <button id="btnCerca">Cerca</button>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Data di nascita</th>
+                        <th>Generazione</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+
+            <script>
+                let data = [];
+            
+                function getGenerazione(dateString) {
+                    const year = new Date(dateString).getFullYear();
+                    if (year < 1946) return "Silent Generation";
+                    if (year < 1965) return "Baby Boomers";
+                    if (year < 1981) return "Generazione X";
+                    if (year < 1997) return "Millennials";
+                    return "Generazione Z";
+                }
+
+                const req = new XMLHttpRequest();
+                req.open("get", "studenti.json");
+                req.send();
+                req.onload = function() {
+                    data = JSON.parse(req.responseText);
+                }
+
+                const selector = document.getElementById('selection');
+                const search = document.getElementById('search');
+                const searchButton = document.getElementById('btnCerca');
+                const tbody = document.getElementById('tbody');
+
+                searchButton.addEventListener('click', () => {
+                    const query = search.value.toLowerCase();
+                    const selection = selector.value;
+                    tbody.innerHTML = "";
+                    data.forEach(persona => {
+                        const matchesQuery = persona.cognome.toLowerCase().includes(query);
+                        const matchesAdult = selection === 'all' || (new Date() - new Date(persona.data_nascita)) > ((((18*365)*24)*60)*60)*1000;
+                        if (matchesQuery && matchesAdult) {
+                            tbody.innerHTML += `<tr><td>${persona.nome}</td><td>${persona.cognome}</td><td>${persona.data_nascita}</td><td>${getGenerazione(persona.data_nascita)}</td>`;
+                        }
+                    });
+                });
+            </script>
+        </main>
+    </body>
+</html>
