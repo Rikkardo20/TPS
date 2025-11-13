@@ -1,34 +1,30 @@
-/* Impostazioni generali del body */
+
 body {
     font-family: "Roboto", Arial, sans-serif;
-    background-color: #f4f4f9; /* colore chiaro di sfondo */
+    background-color: #f4f4f9;
     color: #333; /* testo scuro ma non nero */
     margin: 0;
     padding: 0;
 }
 
-/* Titoli principali */
 h1 {
     font-family: "Georgia", serif;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #4a148c; /* viola scuro */
+    color: #4a148c; 
 }
 
-/* Layout principale */
 main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     max-width: 900px;
-    margin: 0 auto; /* centra il main */
+    margin: 0 auto;
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
-/* Header */
 header {
     display: flex;
     gap: 1.5rem;
@@ -36,30 +32,24 @@ header {
     border-bottom: 2px solid #ccc;
     padding-bottom: 1rem;
 }
-
-/* Tabelle */
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fdfdfd;
 }
-
 th, td {
-    border: 2px solid #7b1fa2; /* viola più soft */
+    border: 2px solid #7b1fa2;
     padding: 0.75rem 1rem;
     text-align: left;
 }
-
 th {
-    background-color: #e1bee7; /* viola chiaro */
+    background-color: #e1bee7;
     color: #4a148c;
 }
-
 td {
-    background-color: #f3e5f5; /* lilla chiaro */
+    background-color: #f3e5f5;
 }
-
-/* Hover sulle righe */
 tr:hover {
     background-color: #d1c4e9;
 }
+
