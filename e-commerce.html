@@ -26,6 +26,7 @@
         color: white;
         border-radius: 6px;
         cursor: pointer;
+        transition: background 0.3s;
     }
     button:hover {
         background: #3399ff;
@@ -34,16 +35,22 @@
         width: 100%;
         border-collapse: collapse;
         background: #2b2b2b;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
     th {
-        background: #4da6ff;
-        color: #1e1e1e;
-        padding: 12px;
+        background: linear-gradient(90deg, #4da6ff, #3399ff);
+        color: white;
+        padding: 14px;
         text-align: left;
+        font-size: 16px;
     }
     td {
         padding: 12px;
         border-bottom: 1px solid #444;
+        font-size: 15px;
+        transition: background 0.3s;
     }
     tr:nth-child(even) td {
         background: #323232;
@@ -58,6 +65,7 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        transition: background 0.3s;
     }
     table button:hover {
         background: #2eb85c;
@@ -79,7 +87,6 @@
         <tr>
             <th>Nome</th>
             <th>Prezzo</th>
-            <th></th>
         </tr>
     </table>
 
