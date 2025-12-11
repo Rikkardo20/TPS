@@ -9,7 +9,7 @@ function LetturaFileXML() {
     pulisciTabella();
 
     let leggi = new XMLHttpRequest();
-    leggi.open('GET', "elettronica.xml", true);
+    leggi.open('GET', "https://rikkardo20.github.io/TPS/elettronica.xml", true);
     leggi.send();
 
     leggi.onload = function () {
@@ -32,7 +32,7 @@ function LetturaFileJSON() {
 
     let leggi = new XMLHttpRequest();
 
-    leggi.open('GET', 'dispositivicasa.json', true);
+    leggi.open('GET', 'https://rikkardo20.github.io/TPS/dispositivicasa.json', true);
     leggi.send();
     leggi.onload = function () {
 
@@ -50,7 +50,7 @@ function LetturaFileCSV() {
     pulisciTabella();
 
     let leggi = new XMLHttpRequest();
-    leggi.open('GET', 'sport.csv', true);
+    leggi.open('GET', 'https://rikkardo20.github.io/TPS/sport.csv', true);
     leggi.send();
 
     leggi.onload = function () {
@@ -65,7 +65,7 @@ function LetturaFileTXT() {
     pulisciTabella();
 
     let leggi = new XMLHttpRequest();
-    leggi.open('GET', 'tipiaerei.txt', true);
+    leggi.open('GET', 'https://rikkardo20.github.io/TPS/tipiaerei.txt', true);
     leggi.send();
 
     leggi.onload = function () {
@@ -88,4 +88,5 @@ function aggiungiriga(nome, prezzo) {
         "<tr><td>" + nome + "</td><td>" + prezzo + 
         "</td><td><button onclick='acquista(\"" + nome + "\", \"" + prezzo + "\")'>Acquista prodotto</button></td></tr>";
 }
+
 
