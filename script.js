@@ -78,7 +78,7 @@ function LetturaFileTXT() {
 }
 
 function acquista(nome, prezzo) {
-    alert("Hai acquistato: " + nome + " soltanto al prezzo di " + prezzo);
+    alert("Hai acquistato: " + nome + ", prezzo: " + prezzo);
 }
 
 function aggiungiriga(nome, prezzo) {
@@ -86,5 +86,6 @@ function aggiungiriga(nome, prezzo) {
 
     tabella.innerHTML +=
         "<tr><td>" + nome + "</td><td>" + prezzo + 
-        "</td><td><button onclick='acquista(\"" + nome + "\", \"" + prezzo + "\")'>Acquista</button></td></tr>";
+        "</td><td><button onclick='acquista(\"" + nome + "\", \"" + prezzo + "\")'>Acquista prodotto</button></td></tr>";
 }
+
