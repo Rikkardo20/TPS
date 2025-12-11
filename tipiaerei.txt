@@ -1,0 +1,5 @@
+Boeing 737 MAX 9;€130,000,000
+Airbus A350-900;€315,000,000
+Gulfstream G800;€78,000,000
+Embraer Phenom 300E;€10,500,000
+Cessna SkyCourier;€7,200,000

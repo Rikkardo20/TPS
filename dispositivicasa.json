@@ -1,0 +1,54 @@
+{
+  "prodotti": [
+    {
+      "id": 1,
+      "nome": "Purificatore d'Aria Dyson Pure Cool",
+      "prezzo": 499.99
+    },
+    {
+      "id": 2,
+      "nome": "Robot Aspirapolvere Roomba S9+",
+      "prezzo": 1199.00
+    },
+    {
+      "id": 3,
+      "nome": "Climatizzatore Daikin Dual Split",
+      "prezzo": 1399.99
+    },
+    {
+      "id": 4,
+      "nome": "Umidificatore Xiaomi SmartMi",
+      "prezzo": 129.99
+    },
+    {
+      "id": 5,
+      "nome": "Fornetto Elettrico Ariete Vintage",
+      "prezzo": 149.99
+    },
+    {
+      "id": 6,
+      "nome": "Piastra a Induzione Samsung 2 Zone",
+      "prezzo": 279.99
+    },
+    {
+      "id": 7,
+      "nome": "Cappa Aspirante Miele Integrata",
+      "prezzo": 899.99
+    },
+    {
+      "id": 8,
+      "nome": "Estrattore di Succo Hurom H-AA",
+      "prezzo": 389.99
+    },
+    {
+      "id": 9,
+      "nome": "Microonde Panasonic Inverter 30L",
+      "prezzo": 199.99
+    },
+    {
+      "id": 10,
+      "nome": "Macchina del Caffè Nespresso Vertuo",
+      "prezzo": 179.99
+    }
+  ]
+}

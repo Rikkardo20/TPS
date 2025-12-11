@@ -1,0 +1,53 @@
+<catalogo>
+  <prodotti>
+
+    <prodotto>
+      <id>1</id>
+      <nome>Tablet Android 10" LTE</nome>
+      <prezzo>229.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>2</id>
+      <nome>Router Wi-Fi 6 Dual Band</nome>
+      <prezzo>129.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>3</id>
+      <nome>SSD NVMe 1TB PCIe 4.0</nome>
+      <prezzo>119.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>4</id>
+      <nome>Smartwatch Waterproof GPS</nome>
+      <prezzo>179.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>5</id>
+      <nome>Stampante Laser Wi-Fi Mono</nome>
+      <prezzo>149.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>6</id>
+      <nome>Altoparlante Smart con Assistente</nome>
+      <prezzo>89.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>7</id>
+      <nome>Action Cam 4K</nome>
+      <prezzo>199.99</prezzo>
+    </prodotto>
+
+    <prodotto>
+      <id>8</id>
+      <nome>Caricatore Wireless 15W</nome>
+      <prezzo>29.99</prezzo>
+    </prodotto>
+
+  </prodotti>
+</catalogo>
