@@ -2,7 +2,7 @@ function pulisciTabella() {
 
     const tab = document.getElementById("tabella");
     if(!tab) return;
-    tab.innerHTML ="<tr><th>Nome</th><th>Prezzo</th><th></th></tr>";
+    tab.innerHTML ="<tr><th>Nome</th><th>Prezzo</th></tr>";
 }
 
 function LetturaFileXML() {
@@ -86,7 +86,5 @@ function aggiungiriga(nome, prezzo) {
 
     tabella.innerHTML +=
         "<tr><td>" + nome + "</td><td>" + prezzo + 
-        "</td><td><button onclick='acquista(\"" + nome + "\", \"" + prezzo + "\")'>Acquista prodotto</button></td></tr>";
+        "</td><td><button onclick='acquista(\"" + nome + "\", \"" + prezzo + "\")'>Acquista prodotto!</button></td></tr>";
 }
-
-
