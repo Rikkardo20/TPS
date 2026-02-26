@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="ServizioConversioneLunghezze"
+ targetNamespace="http://localhost/"
+ xmlns:tns="http://localhost/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+ <message name="RichiestaCalcolo">
+   <part name="valoreQuantita" type="xsd:float"/>
+   <part name="unitaOrigine" type="xsd:string"/>
+   <part name="unitaDestinazione" type="xsd:string"/>
+ </message>
+
+ <message name="RispostaCalcolo">
+   <part name="risultato" type="xsd:float"/>
+ </message>
+
+ <portType name="ConversionePortType">
+   <operation name="CalcolaConversione">
+     <input message="tns:RichiestaCalcolo"/>
+     <output message="tns:RispostaCalcolo"/>
+   </operation>
+ </portType>
+
+ <binding name="ConversioneBinding" type="tns:ConversionePortType">
+   <soap:binding style="rpc"
+     transport="http://schemas.xmlsoap.org/soap/http"/>
+   <operation name="CalcolaConversione">
+     <soap:operation soapAction="urn:CalcolaConversione"/>
+     <input>
+       <soap:body use="encoded" namespace="urn:conversione"
+         encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+     </input>
+     <output>
+       <soap:body use="encoded" namespace="urn:conversione"
+         encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+     </output>
+   </operation>
+ </binding>
+
+ <service name="ServizioConversione">
+   <port name="ConversionePort" binding="tns:ConversioneBinding">
+     <soap:address location="http://localhost/indice_server.php"/>
+   </port>
+ </service>
+
+</definitions>
